@@ -1,8 +1,19 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["./src/**/*.{html,js}"],
+
+const { fontFamily } = require('tailwindcss/defaultTheme')
+
+export default {
+  content: [''],
+  purge: ['./assets/main.css', './src/**/*.{vue,js,ts,jsx,tsx}'],
+  darkMode: false,
   theme: {
-    extend: {},
+    extend: {
+    },
   },
-  plugins: [],
+  plugins: [
+    {
+      tailwindcss: {},
+      autoprefixer: {},
+    }
+  ],
 }
